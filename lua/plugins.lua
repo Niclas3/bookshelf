@@ -65,6 +65,11 @@ function M.setup()
     use {'mfussenegger/nvim-dap'} --debuggy things.
     -- Colorscheme ------------------------------
     use { "morhetz/gruvbox" }
+    --The goal of nvim-bqf is to make Neovim's quickfix window better.
+    use {'kevinhwang91/nvim-bqf'}
+
+    -- notify
+    use "rcarriga/nvim-notify"
     -- Nice statusline / ruler for vim
     use { 'vim-airline/vim-airline' }
     use { 'vim-airline/vim-airline-themes'}

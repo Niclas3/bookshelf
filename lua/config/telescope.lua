@@ -1,6 +1,7 @@
 local M = {}
 local tool = require('utils')
 local builtin = require('telescope.builtin')
+require("telescope").load_extension("notify")
 
 function M.setup()
     tool.nnoremap("<leader>gf", "<cmd>Telescope find_files<cr>")

@@ -110,6 +110,11 @@ _G.packer_plugins = {
     path = "/Users/minzhou/.local/share/nvim/site/pack/packer/start/nerdtree",
     url = "https://github.com/scrooloose/nerdtree"
   },
+  ["nvim-bqf"] = {
+    loaded = true,
+    path = "/Users/minzhou/.local/share/nvim/site/pack/packer/start/nvim-bqf",
+    url = "https://github.com/kevinhwang91/nvim-bqf"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/minzhou/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -124,6 +129,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/minzhou/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-notify"] = {
+    loaded = true,
+    path = "/Users/minzhou/.local/share/nvim/site/pack/packer/start/nvim-notify",
+    url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-treesitter"] = {
     loaded = true,

@@ -253,7 +253,8 @@ function M.setup()
         require("config.treesitter").setup()
         require("config.telescope").setup()
         require("config.vista").setup()
-        -- require("config.tagbar").setup()
+        require("config.notify").setup()
+
 end
 return M
 
