@@ -23,8 +23,8 @@ function M.setup()
         --Auto reload changed files
         set.autoread = true
 
-        --Always change current directory to current-editing-file dir
-        set.autochdir = true
+        --Always not change current directory to current-editing-file dir
+        set.autochdir = false
 
         --Set character encoding to use in vim
         set.fileencodings="utf-8,gb18030,utf-16,big5"
@@ -196,14 +196,15 @@ function M.setup()
         --nmap <space> za
         tools.nnoremap('<space>', "za")
 
-        vim.cmd([[
-            augroup remember_folds
-            autocmd!
-            autocmd BufWinLeave * mkview
-            autocmd BufWinEnter * silent! loadview
-            augroup END
-        ]])
-
+        -- 
+        -- vim.cmd([[
+        --     augroup remember_folds
+        --     autocmd!
+        --     autocmd BufWinLeave * mkview
+        --     autocmd BufWinEnter * silent! loadview
+        --     augroup END
+        -- ]])
+        
         --""""""""""""""""""""""""""""""""""""""""
         --" Edit
         --""""""""""""""""""""""""""""""""""""""""
@@ -251,6 +252,7 @@ function M.setup()
         require("config.nerdtree").setup()
         require("config.airline").setup()
         require("config.treesitter").setup()
+        require("config.telescope").setup()
 end
 return M
 

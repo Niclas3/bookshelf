@@ -50,6 +50,15 @@ function M.setup()
         'nvim-treesitter/nvim-treesitter',
         run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
     }
+    --Telescope
+    -- telescope.nvim is a highly extendable fuzzy finder over lists.
+    -- Built on the latest awesome features from neovim core. Telescope is 
+    -- centered around modularity, allowing for easy customization.
+    use {
+        'nvim-telescope/telescope.nvim', 
+        tag = '0.1.0',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
     -- Debugging
     use {'nvim-lua/plenary.nvim'}
