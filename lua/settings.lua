@@ -247,12 +247,13 @@ function M.setup()
         require("config.rainbow_parentheses").setup()
         require("config.slimv").setup()
         require("config.supertab").setup()
-        require("config.tagbar").setup()
         require("config.indentguides").setup()
         require("config.nerdtree").setup()
         require("config.airline").setup()
         require("config.treesitter").setup()
         require("config.telescope").setup()
+        require("config.vista").setup()
+        -- require("config.tagbar").setup()
 end
 return M
 

@@ -60,8 +60,8 @@ function M.setup()
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    -- Debugging
     use {'nvim-lua/plenary.nvim'}
+    -- Debugging
     use {'mfussenegger/nvim-dap'} --debuggy things.
     -- Colorscheme ------------------------------
     use { "morhetz/gruvbox" }
@@ -114,6 +114,8 @@ function M.setup()
 
     -- ** right hand function or class view by tag
     use { 'majutsushi/tagbar' }
+
+    use "liuchengxu/vista.vim"
 
     -- Simple indentation guides for buffers
     use { 'thaerkh/vim-indentguides' }
