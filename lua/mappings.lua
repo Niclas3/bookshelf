@@ -11,8 +11,8 @@ function M.setup()
         --Moving between splits
         --nmap <leader>w <C-w>w
         utils.nnoremap('<leader>w', "<C-w>w")
-        utils.nnoremap('<leader>wk', "<C-w><Up>")
-        utils.nnoremap('<leader>wj', "<C-w><Down>")
+        -- utils.nnoremap('<leader>wk', "<C-w><Up>")
+        -- utils.nnoremap('<leader>wj', "<C-w><Down>")
         utils.nnoremap('<leader>h', ":syntax on<CR>")
 
         --"toggle tabs
