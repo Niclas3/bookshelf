@@ -35,7 +35,8 @@ function M.setup()
   -- Plugins
   local function plugins(use)
     use { "wbthomason/packer.nvim" }
-
+    -- Configurations for Nvim LSP
+    use 'neovim/nvim-lspconfig' 
     -- Colorscheme ------------------------------
     use { "morhetz/gruvbox" }
     -- Nice statusline / ruler for vim
