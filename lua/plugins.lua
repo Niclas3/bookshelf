@@ -59,6 +59,10 @@ function M.setup()
         tag = '0.1.0',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    --wilder wilder.nvim adds new features and capabilities to wildmenu.
+    use {
+        'gelguy/wilder.nvim'
+    }
 
     use {'nvim-lua/plenary.nvim'}
     -- Debugging

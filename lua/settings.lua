@@ -254,6 +254,7 @@ function M.setup()
         require("config.telescope").setup()
         require("config.vista").setup()
         require("config.notify").setup()
+        require("config.wilder").setup()
 
 end
 return M
