@@ -44,8 +44,8 @@ function M.setup()
     use 'simrat39/rust-tools.nvim' --rust 
 
     -- Debugging
-    use 'nvim-lua/plenary.nvim'
-    use 'mfussenegger/nvim-dap' --debuggy things.
+    use {'nvim-lua/plenary.nvim'}
+    use {'mfussenegger/nvim-dap'} --debuggy things.
     -- Colorscheme ------------------------------
     use { "morhetz/gruvbox" }
     -- Nice statusline / ruler for vim
@@ -83,11 +83,13 @@ function M.setup()
     -- "Supertab is a vim plugin which allows you to 
     -- "use <Tab> for all your insert completion needs
     use { 'ervandew/supertab' }
+    
     --scrooloose/nerdtree
     -- *** Great file system explorer, it appears when you open dir in vim
     -- Allow modification of dir, and may other things
     -- Must have
     use { 'scrooloose/nerdtree' }
+    
 
     -- Vim-expand-region is a Vim plugin that allows you to 
     -- visually select increasingly larger regions of text 

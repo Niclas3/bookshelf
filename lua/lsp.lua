@@ -1,5 +1,4 @@
 local M = {}
-
 function M.setup()
     -- Add additional capabilities supported by nvim-cmp
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -58,18 +57,6 @@ function M.setup()
             { name = 'luasnip' },
         },
     }
-    -- require'lspconfig'.pylsp.setup{
-    --     settings = {
-    --         pylsp = {
-    --             plugins = {
-    --                 pycodestyle = {
-    --                 ignore = {'W391'},
-    --                 maxLineLength = 100
-    --                 }
-    --             }
-    --         }
-    --     }
-    -- }
 end
 
 return M
