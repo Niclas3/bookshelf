@@ -250,6 +250,7 @@ function M.setup()
         require("config.indentguides").setup()
         require("config.nerdtree").setup()
         require("config.airline").setup()
+        require("config.treesitter").setup()
 end
 return M
 

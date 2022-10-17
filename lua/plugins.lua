@@ -43,6 +43,14 @@ function M.setup()
     use 'L3MON4D3/LuaSnip' -- Snippets plugin
     use 'simrat39/rust-tools.nvim' --rust 
 
+    --The goal of nvim-treesitter is both to provide a simple and easy 
+    -- way to use the interface for tree-sitter in Neovim and to 
+    -- provide some basic functionality such as highlighting based on it:
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    }
+
     -- Debugging
     use {'nvim-lua/plenary.nvim'}
     use {'mfussenegger/nvim-dap'} --debuggy things.
@@ -89,7 +97,6 @@ function M.setup()
     -- Allow modification of dir, and may other things
     -- Must have
     use { 'scrooloose/nerdtree' }
-    
 
     -- Vim-expand-region is a Vim plugin that allows you to 
     -- visually select increasingly larger regions of text 
