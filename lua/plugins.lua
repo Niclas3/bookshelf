@@ -67,6 +67,7 @@ function M.setup()
     use {'nvim-lua/plenary.nvim'}
     -- Debugging
     use {'mfussenegger/nvim-dap'} --debuggy things.
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
     -- Colorscheme ------------------------------
     use { "morhetz/gruvbox" }
     --The goal of nvim-bqf is to make Neovim's quickfix window better.
@@ -122,7 +123,7 @@ function M.setup()
     use { 'terryma/vim-expand-region' }
 
     -- ** right hand function or class view by tag
-    use { 'majutsushi/tagbar' }
+    -- use { 'majutsushi/tagbar' }
 
     use "liuchengxu/vista.vim"
 

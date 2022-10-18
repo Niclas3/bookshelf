@@ -125,6 +125,11 @@ _G.packer_plugins = {
     path = "/Users/minzhou/.local/share/nvim/site/pack/packer/start/nvim-dap",
     url = "https://github.com/mfussenegger/nvim-dap"
   },
+  ["nvim-dap-ui"] = {
+    loaded = true,
+    path = "/Users/minzhou/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
+    url = "https://github.com/rcarriga/nvim-dap-ui"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/minzhou/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -169,11 +174,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/minzhou/.local/share/nvim/site/pack/packer/start/supertab",
     url = "https://github.com/ervandew/supertab"
-  },
-  tagbar = {
-    loaded = true,
-    path = "/Users/minzhou/.local/share/nvim/site/pack/packer/start/tagbar",
-    url = "https://github.com/majutsushi/tagbar"
   },
   tcomment_vim = {
     loaded = true,
@@ -229,6 +229,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/minzhou/.local/share/nvim/site/pack/packer/start/vista.vim",
     url = "https://github.com/liuchengxu/vista.vim"
+  },
+  ["wilder.nvim"] = {
+    loaded = true,
+    path = "/Users/minzhou/.local/share/nvim/site/pack/packer/start/wilder.nvim",
+    url = "https://github.com/gelguy/wilder.nvim"
   }
 }
 

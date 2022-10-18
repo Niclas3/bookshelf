@@ -242,6 +242,7 @@ function M.setup()
         --Colorscheme
         cmd('colorscheme gruvbox')
         g.gruvbox_italic=1
+        set.termguicolors =1
 
         --plugins setting.
         require("config.rainbow_parentheses").setup()
