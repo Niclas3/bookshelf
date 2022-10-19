@@ -68,6 +68,8 @@ function M.setup()
     -- Debugging
     use {'mfussenegger/nvim-dap'} --debuggy things.
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }
+    -- use "Pocco81/DAPInstall.nvim"
     -- Colorscheme ------------------------------
     use { "morhetz/gruvbox" }
     --The goal of nvim-bqf is to make Neovim's quickfix window better.

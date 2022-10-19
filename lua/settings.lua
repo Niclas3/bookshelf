@@ -256,6 +256,7 @@ function M.setup()
         require("config.vista").setup()
         require("config.notify").setup()
         require("config.wilder").setup()
+        require("config.trouble").setup()
 
 end
 return M
