@@ -10,9 +10,11 @@ function M.setup()
 
         --Moving between splits
         --nmap <leader>w <C-w>w
-        utils.nnoremap('<leader>w', "<C-w>w")
-        -- utils.nnoremap('<leader>wk', "<C-w><Up>")
-        -- utils.nnoremap('<leader>wj', "<C-w><Down>")
+        utils.nnoremap('<leader>w', "<C-w>ww")
+        utils.nnoremap('<leader>wk', "<C-w><Up>")
+        utils.nnoremap('<leader>wj', "<C-w><Down>")
+        utils.nnoremap('<leader>wh', "<C-w><Left>")
+        utils.nnoremap('<leader>wl', "<C-w><Right>")
         utils.nnoremap('<leader>h', ":syntax on<CR>")
 
         --"toggle tabs
@@ -24,5 +26,7 @@ function M.setup()
         utils.nnoremap('<leader>q', ":w<CR>:bd<CR>")
         --" Run rust
         utils.nnoremap('<leader>r', "<cmd>:RustRun<cr>")
+        --" Compile rust
+        utils.nnoremap('<leader>c', "<cmd>!cargo build -v<cr>")
 end
 return M
