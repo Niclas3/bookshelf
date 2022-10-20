@@ -22,5 +22,7 @@ function M.setup()
         --" quit tab
         --nnoremap <leader>q :w<CR>:bd<CR>
         utils.nnoremap('<leader>q', ":w<CR>:bd<CR>")
+        --" Run rust
+        utils.nnoremap('<leader>r', "<cmd>:RustRun<cr>")
 end
 return M

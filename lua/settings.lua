@@ -257,6 +257,10 @@ function M.setup()
         require("config.notify").setup()
         require("config.wilder").setup()
         require("config.trouble").setup()
+        require("config.dap").setup()
+        require("config.dapui").setup()
+        require("config.dapvtext").setup()
+        -- require("config.rust_tools").setup()
 
 end
 return M

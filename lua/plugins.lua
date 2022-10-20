@@ -68,6 +68,7 @@ function M.setup()
     -- Debugging
     use {'mfussenegger/nvim-dap'} --debuggy things.
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use {"theHamsta/nvim-dap-virtual-text"} -- require("nvim-dap-virtual-text").setup()
     use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }
     -- use "Pocco81/DAPInstall.nvim"
     -- Colorscheme ------------------------------
