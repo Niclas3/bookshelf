@@ -1,3 +1,13 @@
 #install nerd font
 `brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font`
+
+## Require lastest neovim version 0.7+
+#How to use it
+git clone git@github.com:Niclas3/bookshelf.git ~/.config/nvim
+
+##Install rust-analyzer for LSP 
+https://rust-analyzer.github.io/manual.html#rust-analyzer-language-server-binary
+
+
+
