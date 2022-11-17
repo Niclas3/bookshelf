@@ -1,3 +1,8 @@
+
+proxy setting
+alias goproxy='export http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890'
+alias exitproxy='unset http_proxy https_proxy'
+
 #install nerd font
 `brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font`
