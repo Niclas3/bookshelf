@@ -3,7 +3,14 @@ proxy setting
 alias goproxy='export http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890'
 alias exitproxy='unset http_proxy https_proxy'
 
+#requirsment
+ctags
+#install packer first
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
 #install nerd font
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvimt
 `brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font`
 
