@@ -1,7 +1,8 @@
+# requirsment
+ctags  for vista aka right side tag shower.
+clang-format  for C files formatting.
 
-#requirsment
-ctags
-
+# how to install ctags
 # install libjansson first
 $ sudo apt-get install libjansson-dev
 
