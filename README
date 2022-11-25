@@ -1,10 +1,21 @@
 
-proxy setting
-alias goproxy='export http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890'
-alias exitproxy='unset http_proxy https_proxy'
-
 #requirsment
 ctags
+
+# install libjansson first
+$ sudo apt-get install libjansson-dev
+
+# then compile and install universal-ctags.
+#
+# NOTE: Don't use `sudo apt install ctags`, which will install exuberant-ctags and it's not guaranteed to work with vista.vim.
+#
+$ git clone https://github.com/universal-ctags/ctags.git --depth=1
+$ cd ctags
+$ ./autogen.sh
+$ ./configure
+$ make
+$ sudo make install
+
 #install packer first
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
@@ -18,7 +29,7 @@ brew install --cask font-hack-nerd-font`
 #How to use it
 git clone git@github.com:Niclas3/bookshelf.git ~/.config/nvim
 
-##Install rust-analyzer for LSP 
+##Install rust-analyzer/clangd for LSP 
 https://rust-analyzer.github.io/manual.html#rust-analyzer-language-server-binary
 
 
