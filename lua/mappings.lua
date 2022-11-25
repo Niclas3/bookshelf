@@ -28,5 +28,31 @@ function M.setup()
         utils.nnoremap('<leader>r', "<cmd>:RustRun<cr>")
         --" Compile rust
         utils.nnoremap('<leader>c', "<cmd>!cargo build -v<cr>")
+
+        --" FORMAT THINGS"
+        --" Format C codes 
+        -- !!You should install clang-format
+        -- e.g. sudo apt-get install clang-format
+        local result = vim.api.nvim_exec(
+            [[
+                let result = executable('clang-format')
+                if !result
+                    echo '0'
+                else
+                    echo '1'
+                endif
+            ]],
+            true)
+        if(result == "1")
+        then
+            vim.api.nvim_exec(
+            [[
+                autocmd FileType c, nnoremap <leader>mc <cmd>:w <bar> !clang-format -i %<cr>
+            ]], true)
+            -- utils.nnoremap('<leader>mc', "<cmd>!clang-format -i %<cr>")
+        else
+            print("clang-format is not executable, please install it.")
+        end
+
 end
 return M
