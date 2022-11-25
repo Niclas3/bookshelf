@@ -63,6 +63,9 @@ if has("autocmd")
         au BufWritePost *.bin if &bin | %!xxd
         au BufWritePost *.bin set nomod | endif
     augroup END
+
+    " set gitcommit limit text width to 72
+    au FileType gitcommit setlocal tw=72
 endif
 ]])
 end
