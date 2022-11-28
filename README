@@ -1,6 +1,7 @@
 # requirsment
 ctags  for vista aka right side tag shower.
 clang-format  for C files formatting.
+rp aka ripgrep for telescrops grep
 
 # how to install ctags
 # install libjansson first
