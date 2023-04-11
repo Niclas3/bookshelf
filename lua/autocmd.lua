@@ -1,6 +1,9 @@
 local M = {}
 function M.setup()
 vim.cmd([[
+func! file_type()
+    echom "call a function file types"
+endfunc
 """"""""""""""""""""""""""""""""""""""""
 " Autocmd
 """"""""""""""""""""""""""""""""""""""""
@@ -52,7 +55,6 @@ if has("autocmd")
     " Group end
     augroup END
 
-    " for hex editing
     augroup Binary
         au!
         au BufReadPre  *.bin let &bin=1
@@ -63,6 +65,18 @@ if has("autocmd")
         au BufWritePost *.bin if &bin | %!xxd
         au BufWritePost *.bin set nomod | endif
     augroup END
+
+    " for hex editing
+    " augroup Binary
+    "     au!
+    "     au BufReadPre  \(*.bin|*.img\) let &bin=1
+    "     au BufReadPost \(*.bin|*.img\) if &bin | %!xxd
+    "     au BufReadPost \(*.bin|*.img\) set ft=xxd | endif
+    "     au BufWritePre \(*.bin|*.img\) if &bin | %!xxd -r
+    "     au BufWritePre \(*.bin|*.img\) endif
+    "     au BufWritePost \(*.bin|*.img\) if &bin | %!xxd
+    "     au BufWritePost \(*.bin|*.img\) set nomod | endif
+    " augroup END
 
     " set gitcommit limit text width to 72
     au FileType gitcommit setlocal tw=72

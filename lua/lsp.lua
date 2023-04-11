@@ -6,12 +6,23 @@ function M.setup()
     local lspconfig = require('lspconfig')
 
     -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-    local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver' }
+    -- https://clangd.llvm.org/config clangd configration
+    local servers = { 'ccls', 'rust_analyzer', 'pyright', 'tsserver' }
     for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup {
-        -- on_attach = my_custom_on_attach,
-        capabilities = capabilities,
-    }
+        if lsp == 'ccls' then
+            lspconfig['ccls'].setup {
+                init_options = {
+                    cache = {
+                        directory = ".ccls-cache";
+                    };
+                }
+            }
+        else
+            lspconfig[lsp].setup {
+                -- on_attach = my_custom_on_attach,
+                capabilities = capabilities,
+            }
+        end
     end
 
     -- luasnip setup

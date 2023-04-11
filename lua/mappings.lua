@@ -28,6 +28,12 @@ function M.setup()
         utils.nnoremap('<leader>r', "<cmd>:RustRun<cr>")
         --" Compile rust
         utils.nnoremap('<leader>c', "<cmd>!cargo build -v<cr>")
+        --" swapclangd header files
+        utils.nnoremap('<leader>a', "<cmd>:ClangdSwitchSourceHeader<cr>")
+        -- vim.api.nvim_exec(
+        -- [[
+        --     autocmd FileType c,h, nnoremap <leader>a <cmd>:ClangdSwitchSourceHeader<cr>
+        -- ]], true)
 
         --" FORMAT THINGS"
         --" Format C codes 
