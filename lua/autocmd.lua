@@ -1,9 +1,6 @@
 local M = {}
 function M.setup()
 vim.cmd([[
-func! file_type()
-    echom "call a function file types"
-endfunc
 """"""""""""""""""""""""""""""""""""""""
 " Autocmd
 """"""""""""""""""""""""""""""""""""""""
@@ -57,26 +54,26 @@ if has("autocmd")
 
     augroup Binary
         au!
-        au BufReadPre  *.bin let &bin=1
-        au BufReadPost *.bin if &bin | %!xxd
-        au BufReadPost *.bin set ft=xxd | endif
-        au BufWritePre *.bin if &bin | %!xxd -r
-        au BufWritePre *.bin endif
-        au BufWritePost *.bin if &bin | %!xxd
-        au BufWritePost *.bin set nomod | endif
+        au BufReadPre   *.img let &bin=1
+        au BufReadPost  *.img if &bin | %!xxd
+        au BufReadPost  *.img set ft=xxd | endif
+        au BufWritePre  *.img if &bin | %!xxd -r
+        au BufWritePre  *.img endif
+        au BufWritePost *.img if &bin | %!xxd
+        au BufWritePost *.img set nomod | endif
     augroup END
 
     " for hex editing
-    " augroup Binary
-    "     au!
-    "     au BufReadPre  \(*.bin|*.img\) let &bin=1
-    "     au BufReadPost \(*.bin|*.img\) if &bin | %!xxd
-    "     au BufReadPost \(*.bin|*.img\) set ft=xxd | endif
-    "     au BufWritePre \(*.bin|*.img\) if &bin | %!xxd -r
-    "     au BufWritePre \(*.bin|*.img\) endif
-    "     au BufWritePost \(*.bin|*.img\) if &bin | %!xxd
-    "     au BufWritePost \(*.bin|*.img\) set nomod | endif
-    " augroup END
+    "augroup Binary
+    "    au!
+    "    au BufReadPre  \(*.bin|*.img\) let &bin=1
+    "    au BufReadPost \(*.bin|*.img\) if &bin | %!xxd
+    "    au BufReadPost \(*.bin|*.img\) set ft=xxd | endif
+    "    au BufWritePre \(*.bin|*.img\) if &bin | %!xxd -r
+    "    au BufWritePre \(*.bin|*.img\) endif
+    "    au BufWritePost \(*.bin|*.img\) if &bin | %!xxd
+    "    au BufWritePost \(*.bin|*.img\) set nomod | endif
+    "augroup END
 
     " set gitcommit limit text width to 72
     au FileType gitcommit setlocal tw=72
