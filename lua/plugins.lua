@@ -42,6 +42,7 @@ function M.setup()
     use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
     use 'L3MON4D3/LuaSnip' -- Snippets plugin
     use 'simrat39/rust-tools.nvim' --rust 
+    use 'shirk/vim-gas' -- nasm syntax
 
     --The goal of nvim-treesitter is both to provide a simple and easy 
     -- way to use the interface for tree-sitter in Neovim and to 

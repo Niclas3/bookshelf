@@ -213,7 +213,7 @@ function M.setup()
         set.backspace="indent,eol,start"
 
         --Toggle paste mode on \p
-        set.pastetoggle="<leader>p"
+        -- set.pastetoggle="<leader>p"
 
         --Add '-'and '+' as recognized word symbol.
         --E.g dw delete all 'foo-bar' instead just 'foo'
