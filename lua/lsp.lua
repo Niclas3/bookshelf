@@ -11,10 +11,12 @@ function M.setup()
     for _, lsp in ipairs(servers) do
         if lsp == 'ccls' then
             lspconfig['ccls'].setup {
-                init_options = {
-                    cache = {
-                        directory = ".ccls-cache";
-                    };
+                init_options = { 
+                    cache = { directory = ".ccls-cache"; };
+                    clang = { extraArgs = { "-std=c11", 
+                                            "-I/home/zm/Development/C/Orange/src/core/include"
+                                        };
+                            };
                 }
             }
         else
