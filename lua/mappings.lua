@@ -17,6 +17,9 @@ function M.setup()
         utils.nnoremap('<leader>wl', "<C-w><Right>")
         utils.nnoremap('<leader>h', ":syntax on<CR>")
 
+        --lsp things
+        utils.nnoremap('<leader>d', "<C-]>")
+
         --"toggle tabs
         --nnoremap <leader>b :bnext<CR>
         utils.nnoremap('<leader>b', ":bnext<CR>")

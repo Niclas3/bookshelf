@@ -70,10 +70,10 @@ function M.setup()
             },
         })
         tools.nnoremap('<leader>B','<cmd>:DapToggleBreakpoint<cr>')
-        tools.nnoremap('<leader>dr','<cmd>:DapContinue<cr>')
+        tools.nnoremap('<leader>Dr','<cmd>:DapContinue<cr>')
         tools.nnoremap('<leader>S','<cmd>:DapStepInto<cr>')
         tools.nnoremap('<leader>N','<cmd>:DapStepOver<cr>')
-        tools.nnoremap('<leader>dq','<cmd>:DapTerminate<cr>')
+        tools.nnoremap('<leader>DQ','<cmd>:DapTerminate<cr>')
 end
 
 return M
