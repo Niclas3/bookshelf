@@ -46,7 +46,11 @@ function M.setup()
 
     -- for code signature
     use "ray-x/lsp_signature.nvim"
-    
+
+    -- These optional plugins should be loaded directly because of a bug in Packer lazy loading
+    use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
+    use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
+    use 'romgrk/barbar.nvim'
 
     --The goal of nvim-treesitter is both to provide a simple and easy 
     -- way to use the interface for tree-sitter in Neovim and to 
