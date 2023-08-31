@@ -13,8 +13,8 @@ local rep = require("luasnip.extras").rep
 
 local snippets, autosnippets = {}, {} --}}}
 
-local group = vim.api.nvim_create_augroup("Lua Snippets", { clear = true })
-local file_pattern = "*.lua"
+local group = vim.api.nvim_create_augroup("C Snippets", { clear = true })
+local file_pattern = "*.c"
 
 local function cs(trigger, nodes, opts) --{{{
 	local snippet = s(trigger, nodes)
@@ -75,8 +75,24 @@ local bochs_breakpoint_fmt = fmt(
     ]]
 ,{})
 
+local asm_fmt = fmt(
+    [[
+      __asm__ volatile ("{}"
+                       : {}
+                       : {}
+                       : {});
+    ]]
+,{
+    i(1, "xchgw %bx, %bx;"),
+    c(2, { i(1, "\"=a\"(__res)"), i(1, "")}),
+    c(3, { i(1,""), i(1,"")}),
+    c(4, { i(1,""), i(1,"")})
+})
+
 local snippet_bochs_breakpoint= s({ trig = "__[asm]?" }, vim.deepcopy(bochs_breakpoint_fmt)) --}}}
+local snippet_asm = s({ trig = "__[asm]?" }, vim.deepcopy(asm_fmt)) --}}}
 table.insert(snippets, snippet_bochs_breakpoint)
+table.insert(snippets, snippet_asm)
 -- End Refactoring --
 
 return snippets, autosnippets
