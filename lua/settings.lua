@@ -261,6 +261,7 @@ function M.setup()
         require("config.dapui").setup()
         require("config.dapvtext").setup()
         require("config.lsp_signature").setup()
+        require("config.luasnip").setup()
         -- require("config.rust_tools").setup()
 
 end
