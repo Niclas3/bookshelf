@@ -89,10 +89,27 @@ local asm_fmt = fmt(
     c(4, { i(1,""), i(1,"")})
 })
 
+local comment_fmt = fmt(
+    [[
+/* {}
+ *
+ * @param {} {}
+ * @return {}
+ * */
+    ]]
+,{
+    i(1, "Comments write here"),
+    i(2, "param write here"),
+    i(3, "param Comments write here"),
+    i(4, "return Comments write here")
+})
+
 local snippet_bochs_breakpoint= s({ trig = "__[asm]?" }, vim.deepcopy(bochs_breakpoint_fmt)) --}}}
 local snippet_asm = s({ trig = "__[asm]?" }, vim.deepcopy(asm_fmt)) --}}}
+local snippet_comment= s({ trig = "/**" }, vim.deepcopy(comment_fmt)) --}}}
 table.insert(snippets, snippet_bochs_breakpoint)
 table.insert(snippets, snippet_asm)
+table.insert(snippets, snippet_comment)
 -- End Refactoring --
 
 return snippets, autosnippets

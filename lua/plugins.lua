@@ -65,7 +65,7 @@ function M.setup()
     -- centered around modularity, allowing for easy customization.
     use {
         'nvim-telescope/telescope.nvim', 
-        tag = '0.1.0',
+        tag = '0.1.3',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     --wilder wilder.nvim adds new features and capabilities to wildmenu.

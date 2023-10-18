@@ -14,7 +14,7 @@ function M.setup()
                 init_options = { 
                     cache = { directory = ".ccls-cache"; };
                     clang = { extraArgs = { "-std=c11", 
-                                            "-I/usr/include",
+                                            -- "-I/usr/include",
                                             "-I/home/zm/Development/C/Orange/src/core/include"
                                         };
                             };
