@@ -7,7 +7,7 @@ function M.setup()
     local opts = { noremap = true, silent = true }
 
     -- Move to previous/next
-    -- map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
+    -- map('n', '<leader>v', '<Cmd>BufferPrevious<CR>', opts)
     -- map('n', '<leader>b', '<Cmd>BufferNext<CR>', opts)
     -- Re-order to previous/next
     -- map('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
@@ -38,10 +38,10 @@ function M.setup()
     -- Magic buffer-picking mode
     map('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
     -- Sort automatically by...
-    map('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
-    map('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
-    map('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
-    map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
+    map('n', '<leader><Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
+    map('n', '<leader><Space>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
+    map('n', '<leader><Space>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
+    map('n', '<leader><Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 
     -- Other:
     -- :BarbarEnable - enables barbar (enabled by default)

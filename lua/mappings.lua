@@ -23,6 +23,9 @@ function M.setup()
         --"toggle tabs
         --nnoremap <leader>b :bnext<CR>
         utils.nnoremap('<leader>b', ":bnext<CR>")
+        -- map('n', '<leader>v', '<Cmd>BufferPrevious<CR>', opts)
+        utils.nnoremap('<leader>v', ":BufferPrevious<CR>")
+
         --!! New version to see config/barbar.lua !!
 
         --" quit tab

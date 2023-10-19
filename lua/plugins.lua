@@ -50,6 +50,8 @@ function M.setup()
     -- These optional plugins should be loaded directly because of a bug in Packer lazy loading
     use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
     use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
+
+    --barbar.nvim is a tabline plugin with re-orderable, auto-sizing, clickable tabs, icons, nice highlighting, sort-by commands and a magic jump-to-buffer mode. Plus the tab names are made unique when two filenames match.
     use 'romgrk/barbar.nvim'
 
     --The goal of nvim-treesitter is both to provide a simple and easy 
