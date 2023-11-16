@@ -7,13 +7,13 @@ function M.setup()
     local opts = { noremap = true, silent = true }
 
     -- Move to previous/next
-    -- map('n', '<leader>v', '<Cmd>BufferPrevious<CR>', opts)
-    -- map('n', '<leader>b', '<Cmd>BufferNext<CR>', opts)
+    map('n', '<leader>v', '<Cmd>BufferPrevious<CR>', opts)
+    map('n', '<leader>b', '<Cmd>BufferNext<CR>', opts)
     -- Re-order to previous/next
     -- map('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
     -- map('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
     -- Goto buffer in position...
-    -- map('n', '<A-1>', '<Cmd>BufferGoto 1<CR>', opts)
+    map('n', '<leader>1', '<Cmd>BufferGoto 1<CR>', opts)
     -- map('n', '<A-2>', '<Cmd>BufferGoto 2<CR>', opts)
     -- map('n', '<A-3>', '<Cmd>BufferGoto 3<CR>', opts)
     -- map('n', '<A-4>', '<Cmd>BufferGoto 4<CR>', opts)
@@ -26,7 +26,7 @@ function M.setup()
     -- Pin/unpin buffer
     -- map('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
     -- Close buffer
-    map('n', '<leader>q', '<Cmd>BufferClose<CR>', opts)
+    -- map('n', '<leader>q', '<cmd>BufferClose<CR>', opts)
     -- Wipeout buffer
     --                 :BufferWipeout
     -- Close commands
@@ -38,10 +38,10 @@ function M.setup()
     -- Magic buffer-picking mode
     map('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
     -- Sort automatically by...
-    map('n', '<leader><Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
-    map('n', '<leader><Space>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
-    map('n', '<leader><Space>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
-    map('n', '<leader><Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
+    map('n', '<leader><Space>bb', '<cmd>BufferOrderByBufferNumber<CR>', opts)
+    map('n', '<leader><Space>bd', '<cmd>BufferOrderByDirectory<CR>', opts)
+    map('n', '<leader><Space>bl', '<cmd>BufferOrderByLanguage<CR>', opts)
+    map('n', '<leader><Space>bw', '<cmd>BufferOrderByWindowNumber<CR>', opts)
 
     -- Other:
     -- :BarbarEnable - enables barbar (enabled by default)
