@@ -1,151 +1,115 @@
-local M = {}
-
-function M.setup()
-  -- Indicate first time installation
-  local packer_bootstrap = false
-
-  -- packer.nvim configuration
-  local conf = {
-    display = {
-      open_fn = function()
-        return require("packer.util").float { border = "rounded" }
-      end,
-    },
-  }
-
-  -- Check if packer.nvim is installed
-  -- Run PackerCompile if there are changes in this file
-  local function packer_init()
-    local fn = vim.fn
-    local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
-    if fn.empty(fn.glob(install_path)) > 0 then
-      packer_bootstrap = fn.system {
-        "git",
-        "clone",
-        "--depth",
-        "1",
-        "https://github.com/wbthomason/packer.nvim",
-        install_path,
-      }
-      vim.cmd [[packadd packer.nvim]]
-    end
-    vim.cmd "autocmd BufWritePost plugins.lua source <afile> | PackerCompile"
-  end
-
-  -- Plugins
-  local function plugins(use)
-    use { "wbthomason/packer.nvim" }
+require("lazy").setup({
     -- LSP
-    use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
-    use "hrsh7th/nvim-cmp"      -- autocomplate
-    use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
-    use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-    use 'L3MON4D3/LuaSnip' -- Snippets plugin
-    use 'simrat39/rust-tools.nvim' --rust
-    use 'shirk/vim-gas' -- nasm syntax
+     'neovim/nvim-lspconfig', -- Configurations for Nvim LSP
+     "hrsh7th/nvim-cmp",      -- autocomplate
+     'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
+     'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
+     'L3MON4D3/LuaSnip', -- Snippets plugin
+     'simrat39/rust-tools.nvim', --rust
+     'shirk/vim-gas', -- nasm syntax
 
     -- for code signature
-    use "ray-x/lsp_signature.nvim"
+     "ray-x/lsp_signature.nvim",
 
     -- These optional plugins should be loaded directly because of a bug in Packer lazy loading
-    use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
-    use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
+     'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+     'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
 
     --barbar.nvim is a tabline plugin with re-orderable, auto-sizing, clickable tabs, icons, nice highlighting, sort-by commands and a magic jump-to-buffer mode. Plus the tab names are made unique when two filenames match.
-    use 'romgrk/barbar.nvim'
+     'romgrk/barbar.nvim',
 
     --The goal of nvim-treesitter is both to provide a simple and easy 
-    -- way to use the interface for tree-sitter in Neovim and to 
+    -- way to  the interface for tree-sitter in Neovim and to 
     -- provide some basic functionality such as highlighting based on it:
-    use {
+     {
         'nvim-treesitter/nvim-treesitter',
         run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-    }
+     },
     --Telescope
     -- telescope.nvim is a highly extendable fuzzy finder over lists.
     -- Built on the latest awesome features from neovim core. Telescope is 
     -- centered around modularity, allowing for easy customization.
-    use {
+     {
         'nvim-telescope/telescope.nvim', 
         tag = '0.1.3',
         requires = { {'nvim-lua/plenary.nvim'} }
-    }
+     },
     --wilder wilder.nvim adds new features and capabilities to wildmenu.
-    use {
+     {
         'gelguy/wilder.nvim'
-    }
+     },
 
-    use {'nvim-lua/plenary.nvim'}
+     {'nvim-lua/plenary.nvim'},
     -- Debugging
-    use {'mfussenegger/nvim-dap'} --debuggy things.
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-    use {"theHamsta/nvim-dap-virtual-text"} -- require("nvim-dap-virtual-text").setup()
-    use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }
-    -- use "Pocco81/DAPInstall.nvim"
+     {'mfussenegger/nvim-dap'}, --debuggy things.
+     { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} },
+     {"theHamsta/nvim-dap-virtual-text"}, -- require("nvim-dap-virtual-text").setup()
+     { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" },
+    --  "Pocco81/DAPInstall.nvim"
     -- Colorscheme ------------------------------
-    use { "morhetz/gruvbox" }
+     { "morhetz/gruvbox" },
     --The goal of nvim-bqf is to make Neovim's quickfix window better.
-    use {'kevinhwang91/nvim-bqf'}
+     {'kevinhwang91/nvim-bqf'},
 
     -- notify
-    use "rcarriga/nvim-notify"
+     "rcarriga/nvim-notify",
     -- Nice statusline / ruler for vim
-    use { 'vim-airline/vim-airline' }
-    use { 'vim-airline/vim-airline-themes'}
+     { 'vim-airline/vim-airline' },
+     { 'vim-airline/vim-airline-themes'},
     ---------------------------------------------
     -- *** Add smart commands for comments like:
     -- gcc - Toggle comment for the current line
     -- gc  - Toggle comments for selected region or number of strings
     -- Very useful
-    use { 'tomtom/tcomment_vim' }
+     { 'tomtom/tcomment_vim' },
     --  Lisp slimv 
-    use { 'kovisoft/slimv' }
+     { 'kovisoft/slimv' },
 
     -- navigate mark 
-    use {'kshenoy/vim-signature'} 
+     {'kshenoy/vim-signature'},
 
     -- Easymotion test
-    use { 'easymotion/vim-easymotion' }
+     { 'easymotion/vim-easymotion' },
 
     -- RainBoww Parentheses
-    use { 'kien/rainbow_parentheses.vim' }
+     { 'kien/rainbow_parentheses.vim' },
     -- Startup screen
-    use {
-      "goolord/alpha-nvim",
-      config = function()
-        require("config.alpha").setup()
-      end,
-    }
+     -- {
+     --  "goolord/alpha-nvim",
+     --   config = function()
+     --    require("config.alpha").setup()
+     --  end,
+     -- },
 
     -- Allow autoclose paired characters like [,] or (,),
     -- and add smart cursor positioning inside it,
-    use { 'Raimondi/delimitMate' }
+     { 'Raimondi/delimitMate' },
 
     -- "Supertab is a vim plugin which allows you to 
-    -- "use <Tab> for all your insert completion needs
-    use { 'ervandew/supertab' }
+    -- " <Tab> for all your insert completion needs
+     { 'ervandew/supertab' },
     
     --scrooloose/nerdtree
     -- *** Great file system explorer, it appears when you open dir in vim
     -- Allow modification of dir, and may other things
     -- Must have
-    use { 'scrooloose/nerdtree' }
+     { 'scrooloose/nerdtree' },
 
     -- Vim-expand-region is a Vim plugin that allows you to 
     -- visually select increasingly larger regions of text 
     -- using the same key combination.
-    use { 'terryma/vim-expand-region' }
+     { 'terryma/vim-expand-region' },
 
     -- ** right hand function or class view by tag
-    -- use { 'majutsushi/tagbar' }
+    --  { 'majutsushi/tagbar' }
 
-    use "liuchengxu/vista.vim"
+     "liuchengxu/vista.vim",
 
     -- Simple indentation guides for buffers
-    use { 'thaerkh/vim-indentguides' }
+     { 'thaerkh/vim-indentguides' },
 
     -- Multiple cursors
-    use { 'terryma/vim-multiple-cursors' }
+     { 'terryma/vim-multiple-cursors' },
 
     -- tpope/vim-surround
     -- ** Add usefull hotkey for operation with surroundings
@@ -153,19 +117,6 @@ function M.setup()
     -- change surroundings symbols to another
     -- and ds{what} - remove them
     -- Now with the cursor on "Hello", press ysiw] (iw is a text object).
-    use { 'tpope/vim-surround' }
+     { 'tpope/vim-surround' }
+})
 
-    if packer_bootstrap then
-      print "Restart Neovim required after installation!"
-      require("packer").sync()
-    end
-  end
-
-  packer_init()
-
-  local packer = require "packer"
-  packer.init(conf)
-  packer.startup(plugins)
-end
-
-return M
