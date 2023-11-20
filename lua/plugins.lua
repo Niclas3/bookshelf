@@ -94,7 +94,14 @@ require("lazy").setup({
     -- Allow modification of dir, and may other things
     -- Must have
      { 'scrooloose/nerdtree' },
-
+     -- 'nvim-tree/nvim-tree.lua',
+     --obsolete
+     {
+        'stevearc/oil.nvim',
+        opts = {},
+        -- Optional dependencies
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+     },
     -- Vim-expand-region is a Vim plugin that allows you to 
     -- visually select increasingly larger regions of text 
     -- using the same key combination.
