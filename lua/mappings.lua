@@ -39,7 +39,7 @@ function M.setup()
         utils.nnoremap('<leader>a', "<cmd>:ClangdSwitchSourceHeader<cr>")
 
         --easymotion
-        utils.nnoremap('<leader><leader>f', "<Plug>(easymotion-bd-f)")
+        utils.nnoremap('<leader>s', "<Plug>(easymotion-bd-f)")
 
         -- vim.api.nvim_exec(
         -- [[
