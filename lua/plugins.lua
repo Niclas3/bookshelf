@@ -11,6 +11,10 @@ require("lazy").setup({
     -- for code signature
      "ray-x/lsp_signature.nvim",
 
+    --Vim plugin for automatically highlighting other uses of the word under
+    -- the cursor using either LSP, Tree-sitter, or regex matching.
+     "RRethy/vim-illuminate",
+
     -- These optional plugins should be loaded directly because of a bug in Packer lazy loading
      'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
      'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status

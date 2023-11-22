@@ -15,7 +15,7 @@ function M.setup()
         utils.nnoremap('<leader>wj', "<C-w><Down>")
         utils.nnoremap('<leader>wh', "<C-w><Left>")
         utils.nnoremap('<leader>wl', "<C-w><Right>")
-        utils.nnoremap('<leader>h', ":syntax on<CR>")
+        -- utils.nnoremap('<leader>h', ":syntax on<CR>")
 
         --lsp things
         utils.nnoremap('<leader>d', "<C-]>")
@@ -37,6 +37,10 @@ function M.setup()
         utils.nnoremap('<leader>c', "<cmd>!cargo build -v<cr>")
         --" swapclangd header files
         utils.nnoremap('<leader>a', "<cmd>:ClangdSwitchSourceHeader<cr>")
+
+        --easymotion
+        utils.nnoremap('<leader><leader>f', "<Plug>(easymotion-bd-f)")
+
         -- vim.api.nvim_exec(
         -- [[
         --     autocmd FileType c,h, nnoremap <leader>a <cmd>:ClangdSwitchSourceHeader<cr>
@@ -66,6 +70,14 @@ function M.setup()
         else
             print("clang-format is not executable, please install it.")
         end
+        -- set high light
+
+            vim.api.nvim_exec(
+            [[
+                hi def IlluminatedWordText gui=underline
+                hi def IlluminatedWordRead gui=underline
+                hi def IlluminatedWordWrite gui=underline
+            ]], true)
 
 end
 return M

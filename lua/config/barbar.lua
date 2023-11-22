@@ -38,10 +38,10 @@ function M.setup()
     -- Magic buffer-picking mode
     map('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
     -- Sort automatically by...
-    map('n', '<leader><Space>bb', '<cmd>BufferOrderByBufferNumber<CR>', opts)
-    map('n', '<leader><Space>bd', '<cmd>BufferOrderByDirectory<CR>', opts)
-    map('n', '<leader><Space>bl', '<cmd>BufferOrderByLanguage<CR>', opts)
-    map('n', '<leader><Space>bw', '<cmd>BufferOrderByWindowNumber<CR>', opts)
+    map('n', '<leader><Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
+    map('n', '<leader><Space>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
+    map('n', '<leader><Space>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
+    map('n', '<leader><Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 
     -- Other:
     -- :BarbarEnable - enables barbar (enabled by default)
