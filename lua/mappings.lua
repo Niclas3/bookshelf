@@ -41,6 +41,13 @@ function M.setup()
         --easymotion
         utils.nnoremap('<leader>s', "<Plug>(easymotion-bd-f)")
 
+        -- " Move to line
+        -- map <Leader>L <Plug>(easymotion-bd-jk)
+        -- nmap <Leader>L <Plug>(easymotion-overwin-line)
+        -- utils.nnoremap('<leader>L', "<Plug>(easymotion-overwin-line)")
+        utils.nnoremap('<leader>j', "<Plug>(easymotion-j)")
+        utils.nnoremap('<leader>k', "<Plug>(easymotion-k)")
+
         -- vim.api.nvim_exec(
         -- [[
         --     autocmd FileType c,h, nnoremap <leader>a <cmd>:ClangdSwitchSourceHeader<cr>

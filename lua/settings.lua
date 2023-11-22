@@ -265,6 +265,7 @@ function M.setup()
         require("config.nerdtree").setup()
         require("config.oil").setup()
         require("config.illuminate").setup()
+        require("config.flash").setup()
         -- require("config.nvim_tree").setup()
         -- require("config.rust_tools").setup()
 
