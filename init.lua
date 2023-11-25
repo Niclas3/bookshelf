@@ -42,15 +42,16 @@ vim.opt.rtp:prepend(lazypath)
 
 -- for stable version [recommended]
 bootstrap("https://github.com/udayvir-singh/tangerine.nvim", "v2.8")
-
  
- local nvim_dir = vim.fn.stdpath("config")
+local nvim_dir = vim.fn.stdpath("config")
 require "tangerine".setup {
      vimrc   = nvim_dir .. "/init.fnl",
      source  = nvim_dir .. "/fnl",
      target  = nvim_dir .. "/lua",
      --target = vim.fn.stdpath [[data]] .. "/tangerine",
-     rtpdirs = {},
+     -- compile files in &rtp
+     rtpdirs = {
+     },
      compiler = {
         -- enable popup showing compiled files
         verbose = true,
@@ -63,9 +64,3 @@ vim.opt.rtp:prepend(nvim_dir .. "/lua")
 
 require("tangerine_vimrc")
 
-
--- require("plugins")
--- require("settings").setup()
--- require("mappings").setup()
--- require("autocmd").setup()
--- require("lsp").setup()

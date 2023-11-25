@@ -248,4 +248,4 @@
 (require :plugins/supertab)
 (require :plugins/neoformat)
 (require :plugins/sexp)
-
+(require :plugins/aniseed)
