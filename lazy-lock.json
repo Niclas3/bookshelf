@@ -39,6 +39,7 @@
   "vim-illuminate": { "branch": "master", "commit": "3bd2ab64b5d63b29e05691e624927e5ebbf0fb86" },
   "vim-indentguides": { "branch": "master", "commit": "7ac793f85da7e58a5572456b1beb9071391a3fb5" },
   "vim-multiple-cursors": { "branch": "master", "commit": "6456718e1d30b42c04b920c5413ca44f68f08759" },
+  "vim-sexp": { "branch": "master", "commit": "14464d4580af43424ed8f2614d94e62bfa40bb4d" },
   "vim-signature": { "branch": "master", "commit": "6bc3dd1294a22e897f0dcf8dd72b85f350e306bc" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "vista.vim": { "branch": "master", "commit": "290b815cd5a5ff1fb65a48936633d93e2bf14dbd" },

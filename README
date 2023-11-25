@@ -4,6 +4,8 @@ clang-format  for C files formatting.
 rp aka ripgrep for telescrops grep
 fnlfmt https://git.sr.ht/~technomancy/fnlfmt
 fennel 
+fennel-lsp cargo install --git https://github.com/rydesun/fennel-language-server
+ccls for C lsp
 
 # how to install ctags
 # install libjansson first
