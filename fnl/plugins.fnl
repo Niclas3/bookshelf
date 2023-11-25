@@ -2,6 +2,7 @@
 (local lazy (require :lazy))
 
 (lazy.setup [
+  ;; fennel env
   :udayvir-singh/tangerine.nvim
     ;; LSP
      :neovim/nvim-lspconfig  ;; Configurations for Nvim LSP
@@ -14,7 +15,7 @@
      :bakpakin/fennel.vim
     ;format code
     :sbdchd/neoformat
-    ;fnl run time things 
+    ;fnl run time things
      :Olical/aniseed
     ;For code signature
      :ray-x/lsp_signature.nvim
