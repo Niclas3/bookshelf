@@ -2,6 +2,8 @@
 ctags  for vista aka right side tag shower.
 clang-format  for C files formatting.
 rp aka ripgrep for telescrops grep
+fnlfmt https://git.sr.ht/~technomancy/fnlfmt
+fennel 
 
 # how to install ctags
 # install libjansson first

@@ -13,7 +13,11 @@
                             12 [:darkgreen   :RoyalBlue3]
                             13 [:darkcyan    :SeaGreen3]
                             14 [:darkred     :DarkOrchid3]
-                            15 [:red         :firebrick3]})
-(set vim.g.rbpt_max 9)
+                            15 [:red         :firebrick3]
+                            16 [:Darkblue    :SeaGreen3]})
+(set vim.g.rbpt_max 15)
 (set vim.g.rbpt_loadcmd_toggle 0)
 (vim.cmd "au VimEnter * RainbowParenthesesToggle")
+(vim.cmd "au Syntax * RainbowParenthesesLoadRound")
+(vim.cmd "au Syntax * RainbowParenthesesLoadSquare")
+(vim.cmd "au Syntax * RainbowParenthesesLoadBraces")

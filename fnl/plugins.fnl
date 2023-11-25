@@ -12,6 +12,10 @@
      :simrat39/rust-tools.nvim ;;rust
      :shirk/vim-gas ;; nasm syntax
      :bakpakin/fennel.vim
+    ;format code
+    :sbdchd/neoformat
+    ;fnl run time things 
+     :Olical/aniseed
     ;For code signature
      :ray-x/lsp_signature.nvim
 
@@ -84,6 +88,7 @@
 
     ;; RainBoww Parentheses
       :kien/rainbow_parentheses.vim
+      ; :luochen1990/rainbow
 
     ;; Allow autoclose paired characters like [,] or (,),
     ;; and add smart cursor positioning inside it,
