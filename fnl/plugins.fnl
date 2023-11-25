@@ -13,6 +13,8 @@
      :simrat39/rust-tools.nvim ;;rust
      :shirk/vim-gas ;; nasm syntax
      :bakpakin/fennel.vim
+    ;Lisp things
+    :Olical/conjure
     ;format code
     :sbdchd/neoformat
     ;fnl run time things
