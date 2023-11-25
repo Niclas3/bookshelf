@@ -222,25 +222,10 @@
 (set vim.g.gruvbox_italic 1) 
 (set vim.o.termguicolors   true) 
 
-;;" FORMAT THINGS"
-;;" Format C codes 
-;; !!You should install clang-format
-;; e.g. sudo apt-get install clang-format
-; (let [result (vim.api.nvim_exec "let result = executable('clang-format')
-;             if !result
-;                 echo '0'
-;             else
-;                 echo '1'
-;             endif
-;         " true)]
-; (if (= result :1) (vim.api.nvim_exec "autocmd FileType c, nnoremap <leader>mc <cmd>:w <bar> !clang-format -i %<cr>
-;         " true)
-;     (print "clang-format is not executable, please install it. "))) 
-;
 ;set highlight
-(vim.api.nvim_exec "hi def IlluminatedWordText gui=underline
-                    hi def IlluminatedWordRead gui=underline
-                    hi def IlluminatedWordWrite gui=underline" true)	
+; (vim.api.nvim_exec "hi def IlluminatedWordText gui=underline
+;                     hi def IlluminatedWordRead gui=underline
+;                     hi def IlluminatedWordWrite gui=underline" true)	
 
 ;; plugins settings
 (require :plugins/lsp)
@@ -262,5 +247,5 @@
 (require :plugins/wilder)
 (require :plugins/supertab)
 (require :plugins/neoformat)
-
+(require :plugins/sexp)
 
