@@ -18,6 +18,9 @@
      :Olical/aniseed
     ;For code signature
      :ray-x/lsp_signature.nvim
+    ;Vim-sexp brings the Vim philosophy of precision editing to S-expressions.
+    :guns/vim-sexp
+    ;tpope/vim-repeat
 
     ;;Vim plugin for automatically highlighting other uses of the word under
     ;; the cursor using either LSP, Tree-sitter, or regex matching.
