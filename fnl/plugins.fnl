@@ -15,9 +15,11 @@
      :bakpakin/fennel.vim
     ;Lisp things
     :Olical/conjure
+    ;racket things
+    :wlangstroth/vim-racket
     ;format code
     :sbdchd/neoformat
-    ;fnl run time things
+    ;fennel run time things
      :Olical/aniseed
     ;For code signature
      :ray-x/lsp_signature.nvim

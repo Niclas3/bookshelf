@@ -10,5 +10,5 @@
                                          {:name :buffer
                                           :option {:sources [{:name :conjure}]}})
                            (cmp.setup config))}]
- :ft [:clojure :fennel :python]
+ :ft [:clojure :fennel :python :racket]
  :init (fn [] (tset vim.g "conjure#debug" true))}

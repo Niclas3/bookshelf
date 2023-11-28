@@ -1,7 +1,7 @@
 ;stevearc/oil.nvim
 (let [wk (require :which-key)]
   (wk.register {
-     :- ["<cmd>Oil<cr>" "Oil open parent directory"]
+     := ["<cmd>Oil<cr>" "Oil open parent directory"]
      }
     {
       :mode   "n"
@@ -24,7 +24,7 @@
                                     :override (fn [conf] conf)
                                     :padding 2
                                     :win_options {:winblend 0}}
-                            :keymaps {:- :actions.parent
+                            :keymaps {:= :actions.parent
                                       :<C-c> :actions.close
                                       :<C-h> :actions.select_split
                                       :<C-l> :actions.refresh

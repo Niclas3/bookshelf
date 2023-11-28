@@ -5,9 +5,9 @@
 ;   (new-split :test))
 ;
 (let [wk (require :which-key)]
-  (wk.register {:<C-r> ["<cmd>AniseedEvalFile %<cr>" "aniseed eval file"]}
+  (wk.register {:<r> ["<cmd>AniseedEvalFile %<cr>" "aniseed eval file"]}
                {:mode :n
-                :prefix ""
+                :prefix "/"
                 :buffer nil
                 :silent true
                 :noremap true

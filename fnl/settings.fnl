@@ -3,7 +3,7 @@
 (set vim.o.syntax :on)
 ;;Set up leader key <leader>, i use default \
 (set vim.g.mapleader ",")
-(set vim.g.maplocalleader "`")
+(set vim.g.maplocalleader "\'" )
 ;; disable mouse
 (set vim.o.mouse "")
 ;;""""""""""""""""""""""""""""""""""""""""·····
