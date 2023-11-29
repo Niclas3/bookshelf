@@ -18,6 +18,9 @@
 ; Set the executive for some filetypes explicitly. Use the explicit executive
 ; instead of the default one for these filetypes when using `:Vista` without
 ; specifying the executive.
-(set vim.g.vista_executive_for {:cpp :vim_lsp
-                                :fnl :vim_lsp})
+(set vim.g.vista_executive_for {:cpp :ctags ;; this for header like *.h file
+                                :c   :ctags
+                                :fnl :fnl
+                                :vim_lsp :vim_lsp
+                                })
 
