@@ -6,7 +6,8 @@
       :ccls ((. lspconfig server :setup)
              {:init_options 
               {:cache {:directory :.ccls-cache}
-               :clang {:extraArgs [:-std=c11 :-I/home/zm/Development/C/Orange/src/core/include]}}}
+               :clang {:extraArgs [:-std=c11 :-I/home/zm/Development/C/Orange/src/core/include
+                                   ]}}}
              )
       _ ((. lspconfig server :setup)
          {: capabilities}))))

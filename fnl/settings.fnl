@@ -252,3 +252,4 @@
 (require :plugins/sexp)
 (require :plugins/aniseed)
 (require :plugins/conjure)
+(require :plugins/nvim_orgmode)

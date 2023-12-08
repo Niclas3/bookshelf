@@ -130,6 +130,12 @@
 
     ;; Multiple cursors
       :terryma/vim-multiple-cursors 
+    ;; Workflow
+    ;; nvim-orgmode
+     [{
+        1 :nvim-orgmode/orgmode
+        :event :VeryLazy
+     }]
 
     ;; tpope/vim-surround
     ;; ** Add usefull hotkey for operation with surroundings
