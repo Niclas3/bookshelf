@@ -6,7 +6,7 @@
                     :h [:<C-w><Left> "Cursor move left"]
                     :l [:<C-w><Right> "Cursor move right"]}
                 :m [":nohlsearch<cr> :call clearmatches()<cr>" "Clear matches"]
-                :q [":w<cr>:bd<cr>" "quit current tab"]
+                :q [":up<cr>:bd<cr>" "quit current tab"]
                 :s ["<Plug>(easymotion-bd-f)" "easymotion jump"]
                 :j ["<Plug>(easymotion-j)" "easymotion move up"]
                 :k ["<Plug>(easymotion-k)" "easymotion move down"]}
