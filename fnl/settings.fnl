@@ -228,17 +228,16 @@
 ; (vim.api.nvim_exec "hi def IlluminatedWordText gui=underline
 ;                     hi def IlluminatedWordRead gui=underline
 ;                     hi def IlluminatedWordWrite gui=underline" true)	
-
 ;; plugins settings
 (require :plugins/lsp)
 (require :plugins/luasnip)
+(require :plugins/lsp_signature)
 (require :plugins/lsp_cmp)
-(require :plugins/nvim-cmp)
+
 (require :plugins/which-key)
 (require :plugins/nerdtree)
 (require :plugins/rainbow_parentheses)
 (require :plugins/barbar)
-(require :plugins/lsp_signature)
 (require :plugins/vista)
 (require :plugins/indentguides)
 (require :plugins/telescope)
@@ -252,4 +251,3 @@
 (require :plugins/sexp)
 (require :plugins/aniseed)
 (require :plugins/conjure)
-(require :plugins/nvim_orgmode)
