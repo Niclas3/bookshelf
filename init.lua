@@ -3,9 +3,7 @@
 local pack =  "lazy"
 
 local function bootstrap(url, ref)
-    local name = url:gsub(".*/", "")
-    local path
-
+    local name = url:gsub(".*/", "") local path
     if pack == "lazy" then
         path = vim.fn.stdpath("data") .. "/lazy/" .. name
         vim.opt.rtp:prepend(path)
@@ -54,13 +52,12 @@ require "tangerine".setup {
      },
      compiler = {
         -- enable popup showing compiled files
-        verbose = true,
+        verbose = false,
 
         -- compile every time you change fennel files or on entering vim
         hooks = {"onsave", "oninit"}
     }
 }
 vim.opt.rtp:prepend(nvim_dir .. "/lua")
-
 require("tangerine_vimrc")
 

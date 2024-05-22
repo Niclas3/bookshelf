@@ -5,6 +5,8 @@
              :bind true
              :close_timeout 4000
              :debug false
+             :verbose false
+             :log_path (.. (vim.fn.stdpath :cache) :/lsp_signature.log)
              :doc_lines 10
              :extra_trigger_chars {}
              :fix_pos false
@@ -18,7 +20,6 @@
              :hint_inline (fn [] false)
              :hint_prefix "🐸 "
              :hint_scheme :String
-             :log_path (.. (vim.fn.stdpath :cache) :/lsp_signature.log)
              :max_height 12
              :max_width 80
              :move_cursor_key nil
@@ -31,6 +32,5 @@
              :toggle_key nil
              :toggle_key_flip_floatwin_setting false
              :transparency nil
-             :verbose false
              :wrap true
              :zindex 200}))
