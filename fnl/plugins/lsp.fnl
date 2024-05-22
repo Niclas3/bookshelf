@@ -2,6 +2,7 @@
 (require :plugins/lsp/lsp-config-c)
 (require :plugins/lsp/lsp-config-fennel)
 (require :plugins/lsp/lsp-config-vimscript)
+(require :plugins/lsp/lsp-config-lua)
 
 (let [wk (require :which-key)]
   (wk.register {
