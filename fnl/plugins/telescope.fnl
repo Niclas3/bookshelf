@@ -1,11 +1,12 @@
 (let [telescope (require :telescope)
       t_notify ((. (require :telescope) :load_extension) :notify)
       actions (require :telescope.actions)
-      trouble (require :trouble.providers.telescope)
+      ; trouble (require :trouble.providers.telescope)
+      trouble (require :trouble.sources.telescope)
       ]
   ( (. telescope :setup) {:defaults  
-                          {:mappings  {:i  {:<c-t> trouble.open_with_trouble}
-                                       :n  {:<c-t> trouble.open_with_trouble}}}}))
+                          {:mappings  {:i  {:<c-t> trouble.open}
+                                       :n  {:<c-t> trouble.open}}}}))
 
 (let [wk (require :which-key)]
   (wk.register {
