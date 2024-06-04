@@ -27,3 +27,13 @@
                 :noremap true
                 :nowait false
                 :expr false}))
+
+(let [wk (require :which-key)]
+  (wk.register {:a [::ClangdSwitchSourceHeader<cr> "jump between .c and .h"]}
+               {:mode :n
+                :prefix "<leader>"
+                :buffer nil
+                :silent true
+                :noremap true
+                :nowait false
+                :expr false}))
