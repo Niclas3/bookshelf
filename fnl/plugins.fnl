@@ -20,6 +20,13 @@
              :simrat39/rust-tools.nvim
              ;;rust
              :shirk/vim-gas
+             ;;haskell This repository/plugin contains functions to help start a nvim-hs plugin as a separate process.
+             :neovimhaskell/nvim-hs.vim
+             ;;vim-textobj-user - Create your own text objects
+             :kana/vim-textobj-user
+             ;; agda
+             ;; agda-mode in nvim
+             [{1 :isovector/cornelis :do "stack build"}]
              ;; nasm syntax
              :bakpakin/fennel.vim
              ;Lisp things

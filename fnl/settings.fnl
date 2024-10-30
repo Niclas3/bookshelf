@@ -3,7 +3,7 @@
 (set vim.o.syntax :on)
 ;;Set up leader key <leader>, i use default \
 (set vim.g.mapleader ",")
-(set vim.g.maplocalleader "`" )
+(set vim.g.maplocalleader "`")
 ;; disable mouse
 (set vim.o.mouse "")
 ;;""""""""""""""""""""""""""""""""""""""""·····
@@ -223,6 +223,19 @@
 (set vim.g.gruvbox_italic 1)
 (set vim.o.termguicolors true)
 
+(fn create_agda_unicode [from to]
+  (let [command (.. "iabbr " from " " to)]
+    (vim.api.nvim_create_autocmd :FileType
+                                 {:pattern :agda
+                                  :callback (fn []
+                                              (vim.cmd command))})))
+(create_agda_unicode ",equ" "≡")
+(create_agda_unicode ",nat" "ℕ")
+(create_agda_unicode ",qed" "∎")
+(create_agda_unicode ",step" "≡⟨⟩")
+(create_agda_unicode ",all" "∀")
+(create_agda_unicode ",^r" "ʳ")
+(create_agda_unicode ",'" "′")
 
 ;set highlight
 ; (vim.api.nvim_exec "hi def IlluminatedWordText gui=underline
