@@ -4,7 +4,8 @@
                     :k [:<C-w><Up> "Cursor move up"]
                     :j [:<C-w><Down> "Cursor move down"]
                     :h [:<C-w><Left> "Cursor move left"]
-                    :l [:<C-w><Right> "Cursor move right"]}
+                    :l [:<C-w><Right> "Cursor move right"]
+                    :w [:<C-w>w "Cursor move next window"]}
                 :m [":nohlsearch<cr> :call clearmatches()<cr>" "Clear matches"]
                 :q [":up<cr>:bd<cr>" "quit current tab"]
                 :s ["<Plug>(easymotion-bd-f)" "easymotion jump"]
@@ -32,6 +33,20 @@
   (wk.register {:a [::ClangdSwitchSourceHeader<cr> "jump between .c and .h"]}
                {:mode :n
                 :prefix "<leader>"
+                :buffer nil
+                :silent true
+                :noremap true
+                :nowait false
+                :expr false}))
+
+; map for lsp
+(let [wk (require :which-key)]
+  (wk.register {
+                :d ["<cmd>lua vim.lsp.buf.definition()<cr>" "go to definition"]
+                :D ["<cmd>lua vim.lsp.buf.declaration()<cr>" "go to declaration"]
+                }
+               {:mode :n
+                :prefix :<leader>
                 :buffer nil
                 :silent true
                 :noremap true
