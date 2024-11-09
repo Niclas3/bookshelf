@@ -1,9 +1,11 @@
 ; (print "loading... plugins")
 (local lazy (or _G.lazy (require :lazy)))
 
-
 (lazy.setup [;; fennel env
              :udayvir-singh/tangerine.nvim
+             :udayvir-singh/hibiscus.nvim
+             ;; font or style
+             :echasnovski/mini.icons
              ;; LSP
              :neovim/nvim-lspconfig
              ;; Configurations for Nvim LSP
@@ -146,5 +148,22 @@
              :tpope/vim-surround
              ;; Keymapping 
              ;; https://github.com/folke/which-key.nvim 
-             :folke/which-key.nvim]
-            {:performance {:reset_packpath false}})
+             :folke/which-key.nvim
+             ;---local plugin 
+             [{1 :local/ants :dev true}]]
+            {:performance {:reset_packpath false}
+             :ui {:icons {:cmd "⌘"
+                          :config "🛠"
+                          :event "📅"
+                          :ft "📂"
+                          :init "⚙"
+                          :keys "🗝"
+                          :plugin "🔌"
+                          :runtime "💻"
+                          :require "🌙"
+                          :source "📄"
+                          :start "🚀"
+                          :task "📌"
+                          :lazy "💤 "}}
+             :dev {:path "/home/zm/Development/neovim_plugin/code" 
+                   :patterns {} :fallback false}})
