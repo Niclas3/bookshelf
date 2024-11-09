@@ -5,18 +5,6 @@
 (require :plugins/lsp/lsp-config-lua)
 (require :plugins/lsp/lsp-config-ts)
 
-(let [wk (require :which-key)]
-  (wk.register {
-                :d ["<cmd>lua vim.lsp.buf.definition()<cr>" "go to definition"]
-                :D ["<cmd>lua vim.lsp.buf.declaration()<cr>" "go to declaration"]
-                }
-               {:mode :n
-                :prefix :<leader>
-                :buffer nil
-                :silent true
-                :noremap true
-                :nowait false
-                :expr false}))
 
 ; (let [wk (require :which-key)]
 ;   (wk.register {:<Space> [:za "fold exist folder"]}
