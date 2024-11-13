@@ -43,12 +43,36 @@
                 :nowait false
                 :expr false}))
 
+(fn safe_get [func mode name]
+  (local status (pcall func name))
+  (when status
+    (if (= mode :v)
+        (func name))))
 
-(local highlight_word
-       (fn []
-         (let [word (vim.fn.expand :<cword>)]
-           (vim.fn.setreg "/" word)
-           (set vim.o.hlsearch true))))
+(fn copy2sys []
+  (let [start_pos (vim.fn.getpos "v")
+        end_pos (vim.fn.getpos :.)
+        s_row (. start_pos 2)
+        s_col (. start_pos 3)
+        e_row (. end_pos 2)
+        e_col (. end_pos 3) ]
+    (let [str (vim.api.nvim_buf_get_text 0 (- s_row 1) (- s_col 1) (- e_row 1) (- e_col 0) {})]
+      (vim.fn.setreg :+ str))))
+
+(let [wk (require :which-key)]
+  (wk.register {:y [copy2sys "copy select buffer to system clipboard"]}
+               {:mode :v
+                :prefix :<leader>
+                :buffer nil
+                :silent true
+                :noremap true
+                :nowait false
+                :expr false}))
+
+(local highlight_word (fn []
+                        (let [word (vim.fn.expand :<cword>)]
+                          (vim.fn.setreg "/" word)
+                          (set vim.o.hlsearch true))))
 
 ; map for lsp
 (let [wk (require :which-key)]
