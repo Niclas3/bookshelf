@@ -88,6 +88,8 @@
 
 ;;Display Line numbers
 (set vim.o.number true)
+;; use raltive number
+(set vim.o.relativenumber true)
 
 ;;Highlight line with cursor
 (set vim.o.cursorline true)
@@ -236,6 +238,11 @@
 (create_agda_unicode ",all" "∀")
 (create_agda_unicode ",^r" "ʳ")
 (create_agda_unicode ",'" "′")
+
+
+;--for dev
+(let [setup (. (require :ants) :setup)]
+  (setup ))
 
 ;set highlight
 ; (vim.api.nvim_exec "hi def IlluminatedWordText gui=underline
