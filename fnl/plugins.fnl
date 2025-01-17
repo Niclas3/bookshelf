@@ -105,6 +105,7 @@
              ; :luochen1990/rainbow
              ;; Allow autoclose paired characters like [,] or (,),
              ;; and add smart cursor positioning inside it,
+             ;; automatic closing of quotes
              :Raimondi/delimitMate
              ;; "Supertab is a vim plugin which allows you to 
              ;; " <Tab> for all your insert completion needs
@@ -165,5 +166,6 @@
                           :start "🚀"
                           :task "📌"
                           :lazy "💤 "}}
-             :dev {:path "/home/zm/Development/neovim_plugin/code" 
-                   :patterns {} :fallback false}})
+             :dev {:path :/home/zm/Development/neovim_plugin/code
+                   :patterns {}
+                   :fallback false}})
