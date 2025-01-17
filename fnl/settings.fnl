@@ -89,7 +89,8 @@
 ;;Display Line numbers
 (set vim.o.number true)
 ;; use raltive number
-(set vim.o.relativenumber true)
+;; relative number not must useful for me
+; (set vim.o.relativenumber true)
 
 ;;Highlight line with cursor
 (set vim.o.cursorline true)
@@ -103,7 +104,7 @@
 ;;""""""""""""""""""""""""""""""""""""""""
 ;;" Tab options
 ;;""""""""""""""""""""""""""""""""""""""""
-;;One tab equal 4 times space
+;;One tab equal 8 times space according to linux coding style
 ;;Copy indent from previous line
 (set vim.o.autoindent true)
 
@@ -117,7 +118,7 @@
 (set vim.o.smarttab true)
 
 ;;Number of spaces to use for each step of indent
-(set vim.o.shiftwidth 4)
+(set vim.o.shiftwidth 8)
 
 ;;Same but for editing operation (not sure what exactly does it means)
 ;;but in most cases tabstop and softtabstop better be the same
