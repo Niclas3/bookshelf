@@ -1,7 +1,10 @@
 ; (print "loading... plugins")
 (local lazy (or _G.lazy (require :lazy)))
 
-(lazy.setup [;; fennel env
+(lazy.setup [
+             ;; mdx-js syntax rules
+             "jxnblk/vim-mdx-js"
+             ;; fennel env
              :udayvir-singh/tangerine.nvim
              :udayvir-singh/hibiscus.nvim
              ;; font or style
