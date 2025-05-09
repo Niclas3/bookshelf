@@ -8,9 +8,14 @@
                                                :n {:<c-t> trouble.open}}}}))
 
 (fn grep_visual_selection []
-        (let [text (v-select-str)
-              grep_str (. (require :telescope.builtin) :grep_string)]
-          (grep_str {:search (. text 1)})))
+  (let [text (v-select-str)
+        grep_str (. (require :telescope.builtin) :grep_string)]
+    (grep_str {:search (. text 1)})))
+
+(fn grep_search_reg []
+  (let [text (vim.fn.getreg "/")
+        grep_str (. (require :telescope.builtin) :grep_string)]
+    (grep_str {:search text})))
 
 (let [wk (require :which-key)]
   (wk.register {:g {:name "Telescope things"
@@ -20,7 +25,8 @@
                         "Telescope show all buffers"]
                     :h ["<cmd>Telescope help_tags<cr>" "Telescope show help"]
                     :s ["<cmd>Telescope git_commits<cr>"
-                        "Telescope show git commits"]}}
+                        "Telescope show git commits"]
+                    :e [grep_search_reg "grep string at search register"]}}
                {:mode :n
                 :prefix :<leader>
                 :buffer nil
@@ -31,7 +37,8 @@
 
 (let [wk (require :which-key)]
   (wk.register {:g {:name "Telescope things"
-                    :e [grep_visual_selection "Telescope work in visual selection"]}}
+                    :e [grep_visual_selection
+                        "grep selected string in visual mode"]}}
                {:mode :v
                 :prefix :<leader>
                 :buffer nil
