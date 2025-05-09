@@ -1,4 +1,9 @@
 ; (print "loading... autocmd")
+(fn autocmd [event opts]
+  (vim.api.nvim_create_autocmd event opts))
+
+(local notify (require :notify))
+
 (vim.cmd "\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"
 \" Autocmd
 \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"
@@ -77,3 +82,12 @@ if has(\"autocmd\")
     au FileType gitcommit setlocal tw=72
 endif
 ")
+
+;; set local file pwd to the toplevel of git repos
+(autocmd :BufEnter
+         {:callback (fn []
+                      (let [root (vim.fn.systemlist "git rev-parse --show-toplevel")
+                            ok (= vim.v.shell_error 0)]
+                        (if (and ok (not= "" (. root 1)))
+                            (vim.cmd (.. "lcd " (. root 1)))
+                            (notify "non-git repo"))))})
